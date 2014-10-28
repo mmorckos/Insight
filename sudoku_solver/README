@@ -1,0 +1,61 @@
+----------------------
+What Is This?
+----------------------
+
+SudokuSolver is a C++-based command-line tool for efficiently solving Sudoku puzzles. The program
+accepts a properly formatted CSV file containing one or more puzzles and outputs their solutions
+into an output file that can be designated by the user.
+
+SudokuSolver employs two powerful techniques for solving Sudoku puzzles. The first technique is
+based on the constraint propagation and search algorithm by Peter Norvig. The second technique is
+based on Algorithm X by Donald Knuth. The program employs the first technique by default. However,
+the user can choose which technique to use.
+
+
+----------------------
+Content
+----------------------
+
+This package is composed on the following:
+
+- Documented source code files under "src" directory.
+- Makefile for building the program.
+- Sample Sudoku puzzles in "sample_puzzles.csv" file.
+- README file (this file).
+- AUTHORS file.
+
+
+----------------------
+How To Use the Program
+----------------------
+
+To use the program, open a terminal in the projects directory and execute the "make" command. This
+should build the program executable "SudokuSolver". To run the program, simply execute the following
+command:
+
+  ./SudokuSolver -f <input-file-name>
+
+The program has other options to customize its behavior. They are as follows:
+
+- The program outputs the results in a file called "sudoku_output.txt" by default. If you want
+to designate a different output file, use the '-o' option as follows: -o <output-file-name>.
+
+- If you want to select which technique to use, use the '-t' option as follows: -t [1|2].
+Code '1' is for the constraint propagation technique. Code '2' is for Algorithm X.
+
+- If you want to know how much time is spent computing a puzzle, use the '-p' option to record and
+output the processing time for each puzzle.
+
+- If you want to have the results displayed on the terminal, use the '-d' option.
+
+
+The program displays simple status messages during execution. The program can also detect erroneous
+puzzles and other invalid states and will issue a corresponding error message.
+
+
+----------------------
+Platform and Support
+----------------------
+
+SudokuSolver has been developed and tested on a GNU/Linux Debian 7.6 x86_64 machine. This program
+relies on C++11 features.
